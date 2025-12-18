@@ -11,24 +11,30 @@
 <body>
 
  
-  <header class="navbar">
-    <div class="nav-container">
-    <div class="logo">
-        <a href="index.html">
-        <img src="images/Photo.jpeg" alt="portfolio profile image">
-        </a>
-    </div>
+<header class="navbar">
+  <div class="nav-container">
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Photo.jpeg" alt="Siddu Reddy">
+      </a>
     </div>
-  </header>
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
 
   
   <main class="about">
@@ -52,21 +58,53 @@
           </p>
         </div>
 
-        <div class="about-card">
-          <h3>Skills</h3>
-          <p>
-            HTML, CSS, JavaScript, Git, GitHub, Responsive Design,
-            Basic React, and REST APIs.
+       <div class="about-card">
+        <h3>Skills</h3>
+
+            <div class="skill">
+            <span>HTML</span>
+            <div class="skill-bar">
+            <div class="skill-level html">90%</div>
+            </div>
+            </div>
+
+            <div class="skill">
+                <span>CSS</span>
+                <div class="skill-bar">
+                <div class="skill-level css">85%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="skill-bar">
+                <div class="skill-level js">75%</div>
+            </div>
+            </div>
+
+            <div class="skill">
+              <span>React</span>
+              <div class="skill-bar">
+              <div class="skill-level react">65%</div>
+              </div>
+            </div>
+
+       </div>
+
+
+        <div class="about-card education-card">
+          <h3>Education</h3>
+
+          <div class="education-item">
+          <h4>Bachelor of Technology (Computer Science)</h4>
+           <p class="institute">
+                Maturi Venkata Subbarao Engineering College
           </p>
+          <span class="duration">2021 – 2025</span>
         </div>
 
-        <div class="about-card">
-          <h3>Education</h3>
-          <p>
-            Bachelor’s Degree in Computer Science <br />
-            Maturi Venkata Subbarao Engineering College(2021-25)
-          </p>
         </div>
+
 
         <div class="about-card">
           <h3>Career Goals</h3>
@@ -83,7 +121,14 @@
   <footer class="footer">
   <p>&copy; 2025 Siddartha reddy Baradi. All rights reserved.</p>
   </footer>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
+    menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
 
 </body>
 </html>

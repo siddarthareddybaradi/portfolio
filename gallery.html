@@ -11,24 +11,32 @@
 <body>
 
   
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <a href="index.html">
-        <img src="images/Photo.jpeg" alt="portfolio profile image">
-        </a>
-      </div>
+ <header class="navbar">
+  <div class="nav-container">
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html" class="active">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Photo.jpeg" alt="Siddu Reddy">
+      </a>
     </div>
-  </header>
+
+    
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="navMenu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
 
   <!-- Gallery Section -->
   <main class="gallery">
@@ -77,6 +85,14 @@
   <footer class="footer">
   <p>&copy; 2025 Siddartha reddy Baradi. All rights reserved.</p>
   </footer>
+  
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
